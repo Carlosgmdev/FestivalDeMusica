@@ -1,0 +1,48 @@
+.galeria {
+    padding: $separacion 0;
+    h3 {
+        text-align: center;
+    }
+}
+
+.galeria-imagenes {
+    list-style: none;
+    padding: 0;
+    margin-top: $separacion;
+    @include grid(2,$separacion);
+    @include telefono {
+        @include grid(3, $separacion/2)
+    }
+    @include tablet {
+        @include grid(4,$separacion/2)
+    }
+    @include desktop {
+        @include grid(6,$separacion/2)
+    }
+    li {
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+.overlay {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+}
+
+.close {
+    width: 5rem;
+    height: 5rem;
+    background-color: $blanco;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
